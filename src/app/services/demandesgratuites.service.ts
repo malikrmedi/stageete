@@ -16,9 +16,13 @@ export class DemandesgratuitesService {
 
   ajouterDemandesG(Demandegratuite: any): Observable<any> {
     return this.HttpClient.post<any>("https://localhost:7235/demandesgratuites", Demandegratuite);
+
+
+
+    
   }
 
-  
+
 
 
 
