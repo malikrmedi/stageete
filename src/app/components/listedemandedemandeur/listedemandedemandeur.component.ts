@@ -20,7 +20,28 @@ ngOnInit(){
   this.demandeGRAT.getallDemandesG().subscribe(data=>{
     console.log(data);
     this.demandesTab=data;
+    this.fetchDemandes();
     
   })
 }
+
+
+
+fetchDemandes() {
+  this.demandeGRAT.getallDemandesG().subscribe(data => {
+      this.demandesTab = data;
+  });
+}
+
+supprimerDemande(demande: any) {
+
+  this.demandeGRAT.supprimerDemande(demande.numero_demande).subscribe(response => {
+      console.log('Demande supprimée !', response);
+    
+      this.fetchDemandes();
+  });
+}
+
+
+
 }

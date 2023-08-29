@@ -7,21 +7,26 @@
       <tr>
         <th>Demandeur</th>
         <th>Destinataire</th>
-        <th>Produit</th>
+        <th>description</th>
         <th>Date de la Demande</th>
+        <th>motif de la Demande</th>
+
         <th>décision finale</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let demande of demandesTab">
+        <ng-container *ngIf="demande.etat_demande === 'non traité'">
         <td>{{ demande.demandeur }}</td>
         <td>{{ demande.destinataire }}</td>
         <td>{{ demande.description_demande }}</td>
         <td>{{ demande.date_demande.slice(0,-9) }}</td>
+        <td>{{ demande.motif_demande }}</td>
         <td>
-          <button >Accepter</button>
-          <button >Refuser</button>
+          <button (click)="traiterDemande(demande.numero_demande, 'accepter')">Accepter</button>
+          <button (click)="traiterDemande(demande.numero_demande, 'refuser')">Refuser</button>
         </td>
+      </ng-container>
       </tr>
     </tbody>
   </table>

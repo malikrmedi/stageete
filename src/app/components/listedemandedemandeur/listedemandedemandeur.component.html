@@ -7,6 +7,8 @@
         <th>Destinataire</th>
         <th>Produit</th>
         <th>Date de la Demande</th>
+        <th>motif de la Demande</th>
+        <th>description de la Demande</th>
         <th>Etat de la demande</th>
         <th>Actions</th>
       </tr>
@@ -17,9 +19,12 @@
         <td>{{ demande.destinataire }}</td>
         <td>{{ demande.description_demande }}</td>
         <td>{{ demande.date_demande.slice(0,-9) }}</td>
+        <td>{{ demande.motif_demande }}</td>
+        <td>{{ demande.description_demande }}</td>
         <td>{{ demande.etat_demande }}</td>
         <td>
-          <button >Retirer Demande</button>
+          <button (click)="supprimerDemande(demande)">Retirer Demande</button>
+
         </td>
       </tr>
     </tbody>
