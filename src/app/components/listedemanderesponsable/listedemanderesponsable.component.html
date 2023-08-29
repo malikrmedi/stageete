@@ -1,0 +1,28 @@
+
+<app-navbarresponsable></app-navbarresponsable>
+
+<h1>Tableau des demandes de gratuités</h1>
+<table>
+    <thead>
+      <tr>
+        <th>Demandeur</th>
+        <th>Destinataire</th>
+        <th>Produit</th>
+        <th>Date de la Demande</th>
+        <th>décision finale</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let demande of demandesTab">
+        <td>{{ demande.demandeur }}</td>
+        <td>{{ demande.destinataire }}</td>
+        <td>{{ demande.description_demande }}</td>
+        <td>{{ demande.date_demande.slice(0,-9) }}</td>
+        <td>
+          <button >Accepter</button>
+          <button >Refuser</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

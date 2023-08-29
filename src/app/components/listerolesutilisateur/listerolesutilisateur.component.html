@@ -1,0 +1,21 @@
+<app-navbarutilisateur></app-navbarutilisateur>
+
+
+
+<h1>Tableau des rôles utilisateur</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID du rôle</th>
+            <th>Rôle</th>
+            <th>Description du rôle</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let role of rolesTab">
+            <td>{{ role.id_role }}</td>
+            <td>{{ role.role }}</td>
+            <td>{{ role.description_role }}</td>
+        </tr>
+    </tbody>
+</table>

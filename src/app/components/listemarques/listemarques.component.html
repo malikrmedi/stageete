@@ -1,0 +1,22 @@
+<app-navbarutilisateur></app-navbarutilisateur>
+ 
+ 
+ <h1>Tableau des marques</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID de la marque</th>
+                <th>ID du responsable de la marque</th>
+                <th>Nom de la marque</th>
+                <th>Secteur</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let marque of marquesTab">
+                <td>{{ marque.id_marque }}</td>
+                <td>{{ marque.id_responsable_de_marque }}</td>
+                <td>{{ marque.nom_marque }}</td>
+                <td>{{ marque.secteur }}</td>
+            </tr>
+        </tbody>
+    </table>

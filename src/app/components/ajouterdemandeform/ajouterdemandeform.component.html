@@ -1,0 +1,38 @@
+
+<app-navbardemandeur></app-navbardemandeur>
+
+
+<form (ngSubmit)="onSubmit()">
+    <label for="destinataire">Destinataire :</label>
+    <select id="destinataire" name="destinataire" required [(ngModel)]="nouvelleDemande.destinataire">
+        <option value="">-- Sélectionnez un destinataire --</option>
+        <option value="destinataire1">Destinataire 1</option>
+        <option value="destinataire2">Destinataire 2</option>
+        <option value="destinataire3">Destinataire 3</option>
+    </select>
+
+    <label for="description">Description :</label>
+    <textarea id="description" name="description_demande" required [(ngModel)]="nouvelleDemande.description_demande"></textarea>
+
+    <label for="motif">Motif :</label>
+    <select name="motif_demande" required [(ngModel)]="nouvelleDemande.motif_demande">
+        <option value="">-- Sélectionnez un motif --</option>
+        <option value="motif1">Motif 1</option>
+        <option value="motif2">Motif 2</option>
+        <option value="motif3">Motif 3</option>
+        <option value="motif4">Motif 4</option>
+        <option value="motif5">Motif 5</option>
+    </select>
+
+  <!-- <label for="produit">produit :</label>
+    <select id="produit" name="produit" required [(ngModel)]="nouvelleDemande.description_demande">
+      <option value="">--</option>
+      <option value="produit 1">produit 1</option>
+      <option value="produit 2">produit 2</option>
+      <option value="produit 3">produit 3</option>
+      <option value="produit 4">produit 4</option>
+    </select>  -->
+
+
+    <button type="submit">Ajouter Demande</button>
+</form>

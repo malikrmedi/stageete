@@ -1,0 +1,24 @@
+<app-navbarutilisateur></app-navbarutilisateur>
+
+<h1>Tableau des  utilisateurs</h1>
+<table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th>Email</th>
+        <th>Fonction</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ut of UtilisateursTab">
+        <td>{{ ut.id }}</td>
+        <td>{{ ut.nom }}</td>
+        <td>{{ ut.prenom }}</td>
+        <td>{{ ut.email }}</td>
+        <td>{{ ut.fonction }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

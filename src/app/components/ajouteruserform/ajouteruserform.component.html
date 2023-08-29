@@ -1,0 +1,59 @@
+<form #useraddform="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-columns">
+      <div class="form-column">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required [(ngModel)]="nouvelUtilisateur.nom">
+        
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required [(ngModel)]="nouvelUtilisateur.prenom">
+        
+        <label for="matricule">Matricule :</label>
+        <input type="text" id="matricule" name="matricule" required [(ngModel)]="nouvelUtilisateur.matricule">
+        
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" [(ngModel)]="nouvelUtilisateur.email">
+        
+        <label for="fonction">Fonction :</label>
+        <select id="fonction" name="fonction" required [(ngModel)]="nouvelUtilisateur.fonction">
+          <option value="">--</option>
+          <option value="informatique">Informatique</option>
+          <option value="finance">Finance</option>
+          <option value="comptabilite">Comptabilité</option>
+          <option value="marketing">Marketing</option>
+        </select>
+      </div>
+      
+      <div class="form-column">
+        <label for="societe">Société :</label>
+        <select id="societe" name="societe" required [(ngModel)]="nouvelUtilisateur.societe">
+          <option value="">--</option>
+          <option value="argania">Argania</option>
+          <option value="nestle">Nestlé</option>
+          <option value="graindor">Grain d'Or</option>
+        </select>
+        
+        <label for="direction">Direction :</label>
+        <select id="direction" name="direction" required [(ngModel)]="nouvelUtilisateur.direction">
+          <option value="">--</option>
+          <option value="informatique">Informatique</option>
+          <option value="finance">Finance</option>
+          <option value="comptabilite">Comptabilité</option>
+          <option value="marketing">Marketing</option>
+        </select>
+        
+        <label for="superieur">Supérieur Hiérarchique :</label>
+        <input type="text"  name="superieurHierarchique" required [(ngModel)]="nouvelUtilisateur.superieurHierarchique">
+        
+        <label for="motdepasse">Mot de passe :</label>
+        <input type="password" id="motdepasse" name="motdepasse" required [(ngModel)]="nouvelUtilisateur.motdepasse">
+        
+        <label for="statut">Statut :</label>
+        <select id="statut" name="statut" required [(ngModel)]="nouvelUtilisateur.statut">
+          <option value="actif">Actif</option>
+          <option value="nonactif">Non actif</option>
+        </select>
+      </div>
+    </div>
+    
+    <button type="submit">Ajouter Utilisateur</button>
+  </form>

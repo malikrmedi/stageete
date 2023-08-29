@@ -1,0 +1,22 @@
+<app-navbarutilisateur></app-navbarutilisateur>
+
+
+<h1>Tableau des produits</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID du produit</th>
+                <th>ID de la marque</th>
+                <th>Nom du produit</th>
+                <th>Description du produit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let produit of produitsTab">
+                <td>{{ produit.id_produit }}</td>
+                <td>{{ produit.id_marque }}</td>
+                <td>{{ produit.nom_produit }}</td>
+                <td>{{ produit.description_produit }}</td>
+            </tr>
+        </tbody>
+    </table>
