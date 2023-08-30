@@ -13,6 +13,7 @@ import { ListedemandedemandeurComponent } from './components/listedemandedemande
 import { ListedemanderesponsableComponent } from './components/listedemanderesponsable/listedemanderesponsable.component';
 import { DashboardresponsableComponent } from './components/dashboardresponsable/dashboardresponsable.component';
 import { DashboarddemandeurComponent } from './components/dashboarddemandeur/dashboarddemandeur.component';
+import { ListemotifsComponent } from './components/listemotifs/listemotifs.component';
 
 const routes: Routes = [
   {path: "" ,component:InterfaceloginComponent},
@@ -27,7 +28,8 @@ const routes: Routes = [
   {path: "listedemandedemandeur", component:ListedemandedemandeurComponent},
   {path: "listedemanderesponsable", component:ListedemanderesponsableComponent},
   {path: "acceuilresponsable", component:DashboardresponsableComponent},
-  {path: "acceuildemandeur", component:DashboarddemandeurComponent}
+  {path: "acceuildemandeur", component:DashboarddemandeurComponent},
+  {path: "listemotifgratuite", component:ListemotifsComponent}
 
 
 ];

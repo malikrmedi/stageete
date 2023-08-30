@@ -22,6 +22,7 @@ import { NavbardemandeurComponent } from './navbardemandeur/navbardemandeur.comp
 import { NavbarresponsableComponent } from './navbarresponsable/navbarresponsable.component';
 import { DashboarddemandeurComponent } from './components/dashboarddemandeur/dashboarddemandeur.component';
 import { DashboardresponsableComponent } from './components/dashboardresponsable/dashboardresponsable.component';
+import { ListemotifsComponent } from './components/listemotifs/listemotifs.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { DashboardresponsableComponent } from './components/dashboardresponsable
     NavbardemandeurComponent,
     NavbarresponsableComponent,
     DashboarddemandeurComponent,
-    DashboardresponsableComponent
+    DashboardresponsableComponent,
+    ListemotifsComponent
   ],
   imports: [
     BrowserModule,

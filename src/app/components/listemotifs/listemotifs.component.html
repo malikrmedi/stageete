@@ -1,0 +1,21 @@
+<app-navbarutilisateur></app-navbarutilisateur>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
+ <h1>Tableau des motifs</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>motifs id</th>
+                <th>nom du motifs</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let motifs of motifsTab">
+                <td>{{ motifs.code }}</td>
+                <td>{{ motifs.intitule }}</td>
+
+            </tr>
+        </tbody>
+    </table>
+
