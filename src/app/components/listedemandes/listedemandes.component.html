@@ -1,23 +1,29 @@
 <app-navbarutilisateur></app-navbarutilisateur>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-<h1>Tableau des demandes de gratuités</h1>
-<table>
-    <thead>
-      <tr>
-        <th>Demandeur</th>
-        <th>Destinataire</th>
-        <th>Produit</th>
-        <th>Date de la Demande</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let demande of demandesTab">
-        <td>{{ demande.demandeur }}</td>
-        <td>{{ demande.destinataire }}</td>
-        <td>{{ demande.description_demande }}</td>
-        <td>{{ demande.date_demande.slice(0,-9) }}</td>
-      </tr>
-    </tbody>
-  </table>
+<body>
   
+  <div class="container mt-4">
+      <h1>Tableau des demandes de gratuités</h1>
+      <div class="table-container">
+          <table class="table">
+              <thead>
+                  <tr>
+                      <th>Demandeur</th>
+                      <th>Destinataire</th>
+                      <th>Produit</th>
+                      <th>Date de la Demande</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let demande of demandesTab">
+                      <td>{{ demande.demandeur }}</td>
+                      <td>{{ demande.destinataire }}</td>
+                      <td>{{ demande.description_demande }}</td>
+                      <td>{{ demande.date_demande.slice(0,-9) }}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</body>
